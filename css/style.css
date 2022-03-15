@@ -1,0 +1,194 @@
+:root{
+    --dark-color:#19283f;
+    --green-color:#33d1cc;
+    --overlay-color:#19283f69;
+    --padding-section:100px;
+}
+/* global */
+.overlay::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:var(--overlay-color);
+    z-index:-1;
+}
+ul{
+    list-style: none;
+    padding:0
+}
+.spad {
+    padding-top:var(--padding-section);
+    padding-bottom:var(--padding-section)
+}
+.pad{
+    padding-bottom:100px
+}
+.dark-color{
+    color:var(--dark-color);
+}
+.green-color{
+    color:var(--green-color);
+}
+.bg-green{
+    background-color:var(--green-color);
+}
+.bg-dark{
+    background-color:var(--dark-color)!important;
+}
+.lead{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+.special-section p:first-of-type::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 120px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--green-color);
+}
+/* navbar */
+.navbar {
+    background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-item .nav-link{
+    color:#fff
+}
+.navbar .navbar-nav .nav-item .nav-link.active,
+.navbar .navbar-nav .nav-item .nav-link:focus,
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    color:#33d1cc
+}
+.navbar .icon{
+    border-left:1px solid var(--green-color)
+}
+/* start header */
+.header{
+    position:relative;
+    background-image: url('../img/landpage.webp');
+    background-size: cover;
+    height:calc(100vh - 70px)
+}
+.intro {
+    z-index:1
+}
+/* services */
+.services .number{
+    font-size: 12rem;
+    color: #eff7fa;
+}
+.services .icon{
+    position: absolute;
+    font-size: 50px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* testimonail */
+.work ul li{
+    padding: 0.5rem 1rem;
+    cursor:pointer;
+}
+.work ul li:focus,
+.work ul li:hover{
+    color:#33d1cc
+}
+.work .row .col-md-4{
+    transition: 0.3s;
+}
+/* about-us */
+.info {
+    max-width: 400px;
+    margin: auto;
+}
+
+/* team */
+.hero-image{
+    position: relative;
+    top: -39px;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* projects */
+.projects {
+    margin-top:var(--padding-section);
+    margin-bottom:var(--padding-section);
+    background-image:url("../img/landpage.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:500px;
+}
+/* contact */
+.contact input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    background: transparent;
+    outline:none
+}
+.contact ::placeholder{
+    color:#fff;
+}
+
+/* footer */
+.footer{
+    color:#fff
+}
+.footer li {
+    color:#a1a1a1;
+    cursor:pointer
+}
+.footer .social .icons {
+    color:#fff
+}
+.facbook{
+    background-color: #1877f2;
+}
+.twitter{
+    background:#1da1f2
+}
+.linkedin{
+    background-color: #0077b5;
+}
+.instagram{
+    background-color: #ff0000;
+}
+.youtube{
+    background-color: #ff0000;
+}
+
+
+/* animation */
+
+.hide{
+    display: none;
+}
+.show {
+    animation: show linear 0.9s;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@keyframes show {
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
